@@ -1,6 +1,5 @@
 Update submodules
 https://github.com/davisking/dlib.git
-https://github.com/kishimoto-exvision/OpenCVBuiltFilesForWindows.git
 at first.  And then run CallingCmake_dlib.cmd.
 
 In some dlib_examples_build_x86_mkl projects, you need to set "Use Intel MKL" to "Parallel" in project property screen.
