@@ -1,0 +1,5 @@
+dlib_examples_build_x64_cuda
+dlib_examples_build_x86_avx
+dlib_examples_build_x86_mkl
+opencv_x64
+opencv_x86
