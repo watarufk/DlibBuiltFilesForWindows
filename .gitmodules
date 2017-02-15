@@ -1,0 +1,6 @@
+[submodule "dlib"]
+	path = dlib
+	url = https://github.com/davisking/dlib.git
+[submodule "opencv"]
+	path = opencv
+	url = https://github.com/opencv/opencv.git
