@@ -324,7 +324,7 @@ JPEG_LIBRARY:FILEPATH=
 LIB_INSTALL_DIR:STRING=lib64
 
 //The directory containing a CMake configuration file for OpenCV.
-OpenCV_DIR:PATH=../../OpenCVBuiltFilesForWindows/opencv_x64/install
+OpenCV_DIR:PATH=../../opencv_x64/install
 
 //Path to a library.
 PNG_LIBRARY_DEBUG:FILEPATH=PNG_LIBRARY_DEBUG-NOTFOUND
