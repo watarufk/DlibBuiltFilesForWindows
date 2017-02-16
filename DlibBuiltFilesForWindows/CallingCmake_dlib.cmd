@@ -1,8 +1,8 @@
 cd ..
 
-rmdir /S /Q dlib_examples_build_x86_avx
-rmdir /S /Q dlib_examples_build_x64_cuda
-rmdir /S /Q dlib_examples_build_x86_mkl
+REM rmdir /S /Q dlib_examples_build_x86_avx
+REM rmdir /S /Q dlib_examples_build_x64_cuda
+REM rmdir /S /Q dlib_examples_build_x86_mkl
 
 mkdir dlib_examples_build_x86_avx
 cd dlib_examples_build_x86_avx
