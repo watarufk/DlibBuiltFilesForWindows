@@ -9,3 +9,5 @@ In some dlib_examples_build_x86_mkl projects, you need to set "Use Intel MKL" to
 [NOTE]
 ../../opencv_{x86|x64}/install is set to OpenCV_DIR:PATH in dlib cmake settings.
 I set BUILD_opencv_world=OFF, because OpenCV_LIBS (=OpenCV_LIB_COMPONENTS) contains both of each libary and opencv_world, so link errors occurs.
+
+When you make your own project files which uses dnn_*.cpp files, you need to add project property "/bigobj" in [Propety Pages] - [C/C++] - [Command Line] - [Additional Options].
