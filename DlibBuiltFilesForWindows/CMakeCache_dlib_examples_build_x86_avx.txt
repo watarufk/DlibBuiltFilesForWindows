@@ -13,8 +13,7 @@
 # EXTERNAL cache entries
 ########################
 
-// values which I want to change 
-//PROJECT_NAME=dlib_x86_avx
+// CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION (values which I want to change)
 CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION:STRING=8.1
 
 //Choose the type of build, options are: Debug Release
@@ -99,6 +98,9 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 
 //Flags used by the linker during Release with Debug Info builds.
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
+
+//Value Computed by CMake
+CMAKE_PROJECT_NAME:STATIC=dlib_x86_avx
 
 //RC compiler
 CMAKE_RC_COMPILER:FILEPATH=rc
