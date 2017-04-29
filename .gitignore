@@ -1,3 +1,4 @@
 dlib_examples_build_x64_cuda
+dlib_examples_build_x64_cuda_mkl
 dlib_examples_build_x86_avx
 dlib_examples_build_x86_mkl

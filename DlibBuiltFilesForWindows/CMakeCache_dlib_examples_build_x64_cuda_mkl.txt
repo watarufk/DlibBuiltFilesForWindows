@@ -14,7 +14,7 @@
 ########################
 
 // values which I want to change 
-//PROJECT_NAME=dlib_x64_cuda
+//PROJECT_NAME=dlib_x64_cuda_mkl
 CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION:STRING=8.1
 
 //Choose the type of build, options are: Debug Release
@@ -80,7 +80,7 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=/INCREMENTAL:NO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=/debug /INCREMENTAL
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/dlib/x64_cuda/examples
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/dlib/x64_cuda_mkl/examples
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/x86_amd64/link.exe
@@ -310,13 +310,13 @@ DLIB_NO_GUI_SUPPORT:BOOL=OFF
 DLIB_PNG_SUPPORT:BOOL=ON
 
 //Disable this if you don't want to use a BLAS library
-DLIB_USE_BLAS:STRING=OFF
+DLIB_USE_BLAS:BOOL=ON
 
 //Disable this if you don't want to use NVIDIA CUDA
 DLIB_USE_CUDA:BOOL=ON
 
 //Disable this if you don't want to use a LAPACK library
-DLIB_USE_LAPACK:STRING=OFF
+DLIB_USE_LAPACK:BOOL=ON
 
 //Disable this is you don't want to use the MKL DFTI FFT implementation
 DLIB_USE_MKL_FFT:STRING=OFF
@@ -373,19 +373,19 @@ cudnn_include:PATH=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/inclu
 cusolver:FILEPATH=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cusolver.lib
 
 //Dependencies for the target
-dlib_LIB_DEPENDS:STATIC=general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cudart_static.lib;general;ws2_32;general;winmm;general;comctl32;general;gdi32;general;imm32;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cublas.lib;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cublas_device.lib;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cudnn.lib;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/curand.lib;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cusolver.lib;
+dlib_LIB_DEPENDS:STATIC=general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cudart_static.lib;general;ws2_32;general;winmm;general;comctl32;general;gdi32;general;imm32;general;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/mkl_intel_lp64.lib;general;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/mkl_core.lib;general;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/mkl_intel_thread.lib;general;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/intel64/libiomp5md.lib;general;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/mkl_intel_lp64.lib;general;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/mkl_core.lib;general;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/mkl_intel_thread.lib;general;C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/intel64/libiomp5md.lib;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cublas.lib;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cublas_device.lib;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cudnn.lib;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/curand.lib;general;C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/lib/x64/cusolver.lib;
 
 //Path to a library.
-mkl_core:FILEPATH=
+mkl_core:FILEPATH=C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/mkl_core.lib
 
 //Path to a library.
-mkl_intel:FILEPATH=
+mkl_intel:FILEPATH=C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/mkl_intel_lp64.lib
 
 //Path to a library.
-mkl_iomp:FILEPATH=
+mkl_iomp:FILEPATH=C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/compiler/lib/intel64/libiomp5md.lib
 
 //Path to a library.
-mkl_thread:FILEPATH=
+mkl_thread:FILEPATH=C:/Program Files (x86)/IntelSWTools/compilers_and_libraries/windows/mkl/lib/intel64/mkl_intel_thread.lib
 
 //Path to a library.
 sqlite:FILEPATH=sqlite-NOTFOUND
@@ -605,9 +605,9 @@ JPEG_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JPEG_LIBRARY
 JPEG_LIBRARY-ADVANCED:INTERNAL=1
 //Have function jpeg_read_header
-LIBJPEG_IS_GOOD:INTERNAL=
+LIBJPEG_IS_GOOD:INTERNAL=1
 //Have function png_create_read_struct
-LIBPNG_IS_GOOD:INTERNAL=
+LIBPNG_IS_GOOD:INTERNAL=1
 //ADVANCED property for variable: PNG_LIBRARY_DEBUG
 PNG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PNG_LIBRARY_RELEASE

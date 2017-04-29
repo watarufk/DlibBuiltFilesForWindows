@@ -7,7 +7,7 @@ It is necessary to download and install them independently.
 ## Requirement to rebuild
 * Windows 7 or above
 * Visual Studio 2015
-* cmake
+* cmake 3.8
 * CUDA Toolkit 8.0 (<https://developer.nvidia.com/cuda-toolkit>)
 * cudnn-8.0-windows7-x64-v5.1 (<https://developer.nvidia.com/cudnn>)
 * Intel MKL (Community License) (<https://registrationcenter.intel.com/en/forms/?productid=2558&licensetype=2>)
