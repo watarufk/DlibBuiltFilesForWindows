@@ -10,8 +10,7 @@ cmake.exe ../dlib/examples -A x64 ^
   -Dmkl_core="" ^
   -Dmkl_intel="" ^
   -Dmkl_iomp="" ^
-  -Dmkl_thread="" ^
-  -DCMAKE_CONFIGURATION_TYPES:STRING="Release;RelWithDebInfo" 
+  -Dmkl_thread=""
 
 cmake.exe --build "." --target "ALL_BUILD" --config "Release"
-cmake.exe --build "." --target "ALL_BUILD" --config "RelWithDebInfo"
+cmake.exe --build "." --target "ALL_BUILD" --config "Debug"

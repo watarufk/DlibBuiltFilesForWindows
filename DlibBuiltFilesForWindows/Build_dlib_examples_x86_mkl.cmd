@@ -6,8 +6,7 @@ cd dlib_examples_build_x86_mkl
 
 rem On ATOM processor, you can use MKL but you cannot use AVX.
 cmake.exe ../dlib/examples ^
-  -DUSE_SSE4_INSTRUCTIONS:BOOL="1" ^
-  -DCMAKE_CONFIGURATION_TYPES:STRING="Release;RelWithDebInfo" 
+  -DUSE_SSE4_INSTRUCTIONS:BOOL="1"
 
 cmake.exe --build "." --target "ALL_BUILD" --config "Release"
-cmake.exe --build "." --target "ALL_BUILD" --config "RelWithDebInfo"
+cmake.exe --build "." --target "ALL_BUILD" --config "Debug"
