@@ -1,6 +1,7 @@
 Update submodules
 https://github.com/davisking/dlib.git
-at first.  And then run CallingCmake_dlib.cmd.
+at first.  And then run 
+BuildAll.cmd.
 
 
 [NOTE]
