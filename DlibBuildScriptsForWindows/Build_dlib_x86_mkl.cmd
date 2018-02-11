@@ -16,7 +16,9 @@ cmake.exe ../dlib ^
   -DZLIB_LIBRARY_RELEASE:FILEPATH="" ^
   -DLIBJPEG_IS_GOOD:INTERNAL="" ^
   -DLIBPNG_IS_GOOD:INTERNAL="" ^
-  -DUSE_SSE4_INSTRUCTIONS:BOOL="1"
+  -DUSE_SSE4_INSTRUCTIONS:BOOL="1" ^
+  -DCMAKE_INSTALL_PREFIX:PATH="%~dp0../dlib_x86_mkl"
 
 cmake.exe --build "." --target "ALL_BUILD" --config "Release"
 cmake.exe --build "." --target "ALL_BUILD" --config "Debug"
+cmake.exe --build "." --target "INSTALL" --config "Release"

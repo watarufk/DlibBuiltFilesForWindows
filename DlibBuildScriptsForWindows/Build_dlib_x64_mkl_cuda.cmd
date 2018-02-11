@@ -16,7 +16,9 @@ cmake.exe ../dlib -A x64 ^
   -DZLIB_LIBRARY_RELEASE:FILEPATH="" ^
   -DLIBJPEG_IS_GOOD:INTERNAL="" ^
   -DLIBPNG_IS_GOOD:INTERNAL="" ^
-  -DUSE_AVX_INSTRUCTIONS:BOOL="1"
+  -DUSE_AVX_INSTRUCTIONS:BOOL="1" ^
+  -DCMAKE_INSTALL_PREFIX:PATH="%~dp0../dlib_x64_mkl_cuda"
 
 cmake.exe --build "." --target "ALL_BUILD" --config "Release"
 cmake.exe --build "." --target "ALL_BUILD" --config "Debug"
+cmake.exe --build "." --target "INSTALL" --config "Release"

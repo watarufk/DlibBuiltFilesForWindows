@@ -21,7 +21,20 @@ cmake.exe ../dlib/examples -A x64 ^
   -Dmkl_core="" ^
   -Dmkl_intel="" ^
   -Dmkl_iomp="" ^
-  -Dmkl_thread=""
+  -Dmkl_thread="" ^
+  -DCMAKE_INSTALL_PREFIX:PATH="%~dp0../dlib_examples_x64_avx_cuda"
 
 cmake.exe --build "." --target "ALL_BUILD" --config "Release"
 cmake.exe --build "." --target "ALL_BUILD" --config "Debug"
+
+call %~dp0DownloadAndExtractDataFiles.cmd
+
+copy resnet34_1000_imagenet_classifier.dnn    "%~dp0..\dlib_examples_build_x64_avx_cuda"
+copy mmod_human_face_detector.dat             "%~dp0..\dlib_examples_build_x64_avx_cuda"
+copy shape_predictor_68_face_landmarks.dat    "%~dp0..\dlib_examples_build_x64_avx_cuda"
+
+copy "%~dp0..opencv_x64\install\x64\vc14\bin\*320.dll"   "%~dp0..\dlib_examples_build_x64_avx_cuda\Release\"
+copy "%~dp0..opencv_x64\install\x64\vc14\bin\*320d.dll"  "%~dp0..\dlib_examples_build_x64_avx_cuda\Debug\"
+
+cmake.exe --build "." --target "INSTALL" --config "Release"
+
