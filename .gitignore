@@ -11,3 +11,4 @@ dlib_examples_build_x86_mkl
 /DlibBuildScriptsForWindows/resnet34_1000_imagenet_classifier.dnn.bz2
 /DlibBuildScriptsForWindows/shape_predictor_68_face_landmarks.dat
 /DlibBuildScriptsForWindows/shape_predictor_68_face_landmarks.dat.bz2
+/DlibBuildScriptsForWindows/semantic_segmentation_voc2012net.dnn

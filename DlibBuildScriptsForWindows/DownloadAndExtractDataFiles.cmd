@@ -18,3 +18,7 @@ if not exist shape_predictor_68_face_landmarks.dat (
   del shape_predictor_68_face_landmarks.dat.bz2
 )
 
+if not exist semantic_segmentation_voc2012net.dnn (
+  .\aria2c.exe http://dlib.net/files/semantic_segmentation_voc2012net.dnn
+)
+
